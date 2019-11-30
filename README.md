@@ -66,14 +66,18 @@
   * _Deploying PostgreSQL DB to Heroku_
   * __Soution #2__
     * _Research_
-      * [Link 1]()
+      * [Stack Overflow, "how to setup postgres db in Heroku"](https://stackoverflow.com/questions/14166210/how-to-setup-postgres-db-in-heroku)
+    * _Implementation_
+      * in terminal, from app
+      * `heroku run rake db:migrate --app APPNAME`
 * __Issue #3__
   * _Connecting PostgreSQL DB with Rails application_
   * __Solution #3__
     * _Research_
-      * [Digital Ocean," "How To Set Up Ruby on Rails with Postgres"](https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres)
+      * [Digital Ocean, "How To Set Up Ruby on Rails with Postgres"](https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres)
     * _Implementation_
-      * `rake db:setup`
+      * in terminal, from app
+      * `rails db:setup`
       * _Explanation of Command_
         * will create development and test databases
         * set owner to the user specified
