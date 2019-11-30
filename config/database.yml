@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: 'alpha_blog_dev'
+  database: 'my_rails_blog_dev'
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
@@ -20,13 +20,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: 'alpha_blog_test'
+  database: 'my_rails_blog_test'
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  #TODO: add PostgreSQL url here when deploying to PROD
-  database: 'alpha_blog_dev'
+  database: <%= ENV['DATABASE_URL'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
