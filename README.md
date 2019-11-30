@@ -1,5 +1,5 @@
 # My Rails Blog
-> A blog to explore new rails features & testing of framework
+> A blog to explore new rails features along with unit, functional, and integration testing
 > [Link to Live Site]()
 
 # Tech Stack
