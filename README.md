@@ -13,6 +13,7 @@
   * _Package Management_
     * NPM
     * YARN
+    * Babel
     * Webpack
       * faster compilation with Foreman gem 
         * to Start Foreman running process
