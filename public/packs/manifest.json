@@ -1,0 +1,25 @@
+{
+  "application.js": "/packs/js/application-a9d3ae7f90044452ed8f.js",
+  "application.js.map": "/packs/js/application-a9d3ae7f90044452ed8f.js.map",
+  "bootstrap_custom.js": "/packs/js/bootstrap_custom-458e878af7f83e65947c.js",
+  "bootstrap_custom.js.map": "/packs/js/bootstrap_custom-458e878af7f83e65947c.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-a9d3ae7f90044452ed8f.js"
+      ],
+      "js.map": [
+        "/packs/js/application-a9d3ae7f90044452ed8f.js.map"
+      ]
+    },
+    "bootstrap_custom": {
+      "js": [
+        "/packs/js/bootstrap_custom-458e878af7f83e65947c.js"
+      ],
+      "js.map": [
+        "/packs/js/bootstrap_custom-458e878af7f83e65947c.js.map"
+      ]
+    }
+  },
+  "media/images/typewriter.jpg": "/packs/media/images/typewriter-5bcadd89.jpg"
+}

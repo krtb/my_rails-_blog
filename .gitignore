@@ -1,3 +1,8 @@
+# TODO: MY ADDONS
+Procfile.dev
+local_storage.rb
+
+# BELOW IS RAILS GITIGNORE TEMPLATE
 *.rbc
 capybara-*.html
 .rspec
