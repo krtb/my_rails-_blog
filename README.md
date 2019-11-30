@@ -1,6 +1,6 @@
 # My Rails Blog
 > A blog to explore new rails features along with unit, functional, and integration testing
-> [Link to Live Site]()
+> [Link to Live Site](https://my-rails-blogg.herokuapp.com/)
 
 # Tech Stack
 * __Front-End__
