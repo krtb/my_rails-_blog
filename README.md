@@ -26,10 +26,10 @@
   * _tbd_
 
 # Issue & Solution Documentation
-* __Issue 1__
+* __Issue #1__
   * _Missing app/assets/javascript/application.js folder/file in Rails 6_
   * _Slow render on compilation of SCSS_
-  * __Solution 1__
+  * __Solution #1__
     * [Medium Blog Post](https://medium.com/@guilhermepejon/how-to-install-bootstrap-4-3-in-a-rails-6-app-using-webpack-9eae7a6e2832)
     * use & configure Webpack
     * `yarn add bootstrap@4.3.1 jquery popper.js`
@@ -61,4 +61,9 @@
               Popper: ['popper.js', 'default']
           })
       )
-      ```
+   ```
+* __Issue #2__
+  * _Deploying PostgreSQL DB to Heroku_
+  * __Soution #2__
+    * _Research_
+      * [Link 1]()
