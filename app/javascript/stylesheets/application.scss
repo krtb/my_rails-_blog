@@ -76,6 +76,12 @@ footer ul li {
      margin-left: 15px ;
 }
 
+//SHOW action card styling
+.article-actions {
+    border-top: 1px solid $white;
+    padding-top: 5px;
+}
+
 // ANCHOR TAG STYLING
 // a:link { /* Essentially means a[href], or that the link actually goes somewhere */
 //   color: blue;
