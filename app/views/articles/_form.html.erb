@@ -1,64 +1,65 @@
-    <% if @article.errors.any? %>
-<div class="container">
-    <div class="row" >
-        <div class="card border-danger mb-3 col-sm-4 offset-sm-4">
-            <div class="card-body text-danger">
-                <h5 class="card-title">
-                    <%= pluralize(@article.errors.count, "error" ) %>
-                    prohibited this article from being saved.
-                </h5>
-                <div class="card-text">
-                    <ul>
-                        <% @article.errors.full_messages.each do |msg| %>
-                        <li>
-                            <%= msg %>
-                        </li>
-                            <% end %>
-                    </ul>
+<% if @article.errors.any? %>
+    <div class="container">
+        <div class="row" >
+            <div class="card border-danger mb-3 col-sm-4 offset-sm-4">
+                <div class="card-body text-danger">
+                    <h5 class="card-title">
+                        <%= pluralize(@article.errors.count, "error" ) %>
+                        prohibited this article from being saved.
+                    </h5>
+                    <div class="card-text">
+                        <ul>
+                            <% @article.errors.full_messages.each do |msg| %>
+                            <li>
+                                <%= msg %>
+                            </li>
+                                <% end %>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 <% end %>
 
 
 
-    <div class="container" >
-        
-            <%= form_for(@article, :html => {class: "form-horizontal center", role: "form" }) do |f| %>
+<div class="container" >
+    
+        <%= form_for(@article, :html => {class: "form-horizontal center", role: "form" }) do |f| %>
 
-                <!-- TITLE -->
-                <div class="control-label form-group row" >
-                    <div class="col-sm-2" >
-                        <%= f.label :title %>
-                    </div>
-                    <div class="col-sm-8" >
-                        <%= f.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true  %>
-                    </div>
+            <!-- TITLE -->
+            <div class="control-label form-group row" >
+                <div class="col-sm-2" >
+                    <%= f.label :title %>
                 </div>
-
-                <!-- DESCRIPTION -->
-                <div class="control-label form-group row" >
-                    <div class="col-sm-2">
-                        <%= f.label :description %>
-                    </div>
-                    <div class="col-sm-8" >
-                        <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
-                    </div>
+                <div class="col-sm-8" >
+                    <%= f.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true  %>
                 </div>
+            </div>
 
-                <!-- SUBMIT BUTTON -->
-                <div class="control-label form-group row" >
-                    <div class="col-auto offset-sm-2" >
-                        <%= f.submit class: "btn btn-primary btn-lg" %> <br />
-                    </div>
+            <!-- DESCRIPTION -->
+            <div class="control-label form-group row" >
+                <div class="col-sm-2">
+                    <%= f.label :description %>
                 </div>
+                <div class="col-sm-8" >
+                    <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
+                </div>
+            </div>
 
-            <% end %>
-        
-        <!-- LINK BACK TO ARTICLES INDEX PAGE -->
-        <div class="col-sm-4 offset-sm-4" >
-            [ <%= link_to "Cancel request and return to article listing", articles_path %> ]
-        </div>
+            <!-- SUBMIT BUTTON -->
+            <div class="control-label form-group row" >
+                <div class="col-auto offset-sm-2" >
+                    <%= f.submit class: "btn btn-primary btn-lg" %> <br />
+                </div>
+            </div>
+
+        <% end %>
+    
+    <!-- LINK BACK TO ARTICLES INDEX PAGE -->
+    <div class="col-sm-4 offset-sm-4" >
+        [ <%= link_to "Cancel request and return to article listing", articles_path %> ]
     </div>
+    
+</div>
