@@ -1,13 +1,27 @@
     <% if @article.errors.any? %>
-        <h2>The following errors prevented the article from getting created.</h2>
-        <ul>
-            <% @article.errors.full_messages.each do |msg| %>
-                <li>
-                    <%= msg %>
-                </li>
-            <% end %>
-        </ul>
-    <% end %>
+<div class="container">
+    <div class="row" >
+        <div class="card border-danger mb-3 col-sm-4 offset-sm-4">
+            <div class="card-body text-danger">
+                <h5 class="card-title">
+                    <%= pluralize(@article.errors.count, "error" ) %>
+                    prohibited this article from being saved.
+                </h5>
+                <div class="card-text">
+                    <ul>
+                        <% @article.errors.full_messages.each do |msg| %>
+                        <li>
+                            <%= msg %>
+                        </li>
+                            <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
+
 
 
     <div class="container" >
