@@ -83,3 +83,32 @@
         * set owner to the user specified
         * create “schema_migrations” tables in each
         * table is used to record migrations to schemas and data
+* __Issue #4__
+  * _centering horizontal bootstrap4 columns_
+    * __Solution #4__
+      * _Research_
+        * [StackOverflow, "Rails Bootstrap how to format form_for (width grid collapses)"](https://stackoverflow.com/questions/21710486/rails-bootstrap-how-to-format-form-for-width-grid-collapses)
+        * [Bootstrap 4, Docs on Horizontal Centering](https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering)
+        * [FreeCodeCamp, "Learn the Bootstrap 4 Grid System in 10 Minutes"](https://www.freecodecamp.org/news/learn-the-bootstrap-4-grid-system-in-10-minutes-e83bfae115da/)
+      * _Implementation_
+        * in partial form
+        * `<%= form_for @user, :html => {:class => "form-horizontal center"} do |f| %>...`
+        * in html of form
+        * `class="col-auto offset-sm-2"`
+        * _Explanation_
+          * uses a flexbox utility to vertically center the contents and changes .col to .col-auto so that your columns only take up as much space as needed.
+        * html structure
+        * _Explanation_
+           ```html
+           <!-- FIRST -->
+           <div class="container" >
+            
+          <!-- SECOND -->
+           <%= form_for(@article, :html => {class: "form-horizontal center", role: "form" }) do |f| %>
+          <!-- THIRD -->
+            <div class="control-label form-group row" >
+          ```
+          > Bootstrap 4 Rows (from FreeCodeCamp article)
+            > - They have to be placed in containers.
+            > - They are only used for containing columns. 
+            > - The columns have to be children of the row. 
