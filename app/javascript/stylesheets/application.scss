@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/bootstrap";
 $blue: #083d77;
 $white: #efefef;
+$black: #000000;
 
 
 // NAVBAR
@@ -34,7 +35,7 @@ $white: #efefef;
 
 .btn-xlarge {
     font-size: 1.7em;
-    background-color: black ;
+    background-color: $black;
 }
 
 .center {
@@ -80,6 +81,17 @@ footer ul li {
 .article-actions {
     border-top: 1px solid $white;
     padding-top: 5px;
+}
+
+// INDEX SHOW ALL ARTICLES CARD STYLING
+.card-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.card-text {
+     border-top: 1px solid $white;
+     padding-top: 15px;
+     padding-bottom: 15px;
 }
 
 // ANCHOR TAG STYLING
