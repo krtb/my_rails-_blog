@@ -16,6 +16,9 @@
     def create
         # render plain: params[:article].inspect # <ActionController::Parameters {"title"=>"hello", "description"=>"there!\r\n"} permitted: false>
         @article = Article.new(article_params) #need to white list values of Article, with what's beeing passed in from params  hash
+        
+        @article.user = User.first # ensure that Article has User, before implementing AUTH
+        
         if @article.save
             flash[:success] = "Article was successfully created" #show message to user
             redirect_to article_path(@article) # article GET /articles/:id article#show
