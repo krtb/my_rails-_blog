@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+    has_many :articles #User is One side, from One-To-Many Association 
+
     validates :username, presence: true, 
     uniqueness: {case_sensitive: false},
     length: { minumum: 3, maximum: 25 }
