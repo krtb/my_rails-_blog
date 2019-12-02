@@ -14,7 +14,7 @@
     end
 
     def create
-        debugger 
+        # debugger 
         # can view article params in console with article_params below, typing (n) moves you console to next line
         # @article.user.username to get properties from params object hash
 
