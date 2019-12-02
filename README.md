@@ -116,7 +116,7 @@
   * _adding secure passwords for Users_
   * __Solution #4__
     * ADD METHOD: has_secure_password method in model (user.rb)
-    * ADD GEML: gem 'bcrypt' in Gemfile
+    * ADD GEM: gem 'bcrypt' in Gemfile
     * ADD COLUMN:  password_digest attribute in Users table
       * How does above mechanism work?
         1. takes password string that's entered
@@ -124,8 +124,6 @@
         3. `SALTS` password, adding random data to password
         4. to authenticate users with salted password
            1. USE METHOD: `resouce.authenticate('password')` to compare passwords in DB  
-      * can refer to it with virtual attribute file
-      * one 
 
 
 # Resources
