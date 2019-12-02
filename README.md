@@ -111,4 +111,9 @@
           > Bootstrap 4 Rows (from FreeCodeCamp article)
             > - They have to be placed in containers.
             > - They are only used for containing columns. 
-            > - The columns have to be children of the row. 
+            > - The columns have to be children of the row.
+
+
+# Resources
+* [Rubular](https://rubular.com/)
+  * for REGEX, regular expressions
