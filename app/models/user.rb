@@ -3,5 +3,6 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: false},
     length: { minumum: 3, maximum: 25 }
 
-    validates :email, presence: true
+    validates :email, presence: true,
+    length: {maximum: 105},
 end
