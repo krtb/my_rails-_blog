@@ -1,6 +1,6 @@
 # TODO: MY ADDONS
 Procfile.dev
-local_storage.rb
+local_storage.md
 
 # BELOW IS RAILS GITIGNORE TEMPLATE
 *.rbc
