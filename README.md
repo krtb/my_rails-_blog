@@ -112,6 +112,20 @@
             > - They have to be placed in containers.
             > - They are only used for containing columns. 
             > - The columns have to be children of the row.
+* __Issue #4__
+  * _adding secure passwords for Users_
+  * __Solution #4__
+    * ADD METHOD: has_secure_password method in model (user.rb)
+    * ADD GEML: gem 'bcrypt' in Gemfile
+    * ADD COLUMN:  password_digest attribute in Users table
+      * How does above mechanism work?
+        1. takes password string that's entered
+        2. creates `one way hash digest` of string, saves to database 
+        3. `SALTS` password, adding random data to password
+        4. to authenticate users with salted password
+           1. USE METHOD: `resouce.authenticate('password')` to compare passwords in DB  
+      * can refer to it with virtual attribute file
+      * one 
 
 
 # Resources
