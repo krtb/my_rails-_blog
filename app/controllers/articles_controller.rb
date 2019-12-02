@@ -14,6 +14,11 @@
     end
 
     def create
+        debugger 
+        # can view article params in console with article_params below, typing (n) moves you console to next line
+        # @article.user.username to get properties from params object hash
+
+
         # render plain: params[:article].inspect # <ActionController::Parameters {"title"=>"hello", "description"=>"there!\r\n"} permitted: false>
         @article = Article.new(article_params) #need to white list values of Article, with what's beeing passed in from params  hash
         
