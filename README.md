@@ -117,3 +117,5 @@
 # Resources
 * [Rubular](https://rubular.com/)
   * for REGEX, regular expressions
+* [RubyOnRails, "ActiveModel::SecurePassword::ClassMethods"](https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
+  * method: `has_secure_password`
