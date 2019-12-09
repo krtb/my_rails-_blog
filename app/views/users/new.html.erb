@@ -1,0 +1,42 @@
+<!-- obj value becomes what it's container file is -->
+<%= render "shared/errors", obj: @user %>
+
+<div class="container">
+
+    <%= form_for(@user, :html => {class: "form-horizontal center", role: "form" }) do |f| %>
+
+    <!-- TITLE -->
+    <div class="control-label form-group row">
+        <div class="col-sm-2">
+            <%= f.label :title %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true  %>
+        </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="control-label form-group row">
+        <div class="col-sm-2">
+            <%= f.label :description %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of user" %>
+        </div>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <div class="control-label form-group row">
+        <div class="col-auto offset-sm-2">
+            <%= f.submit class: "btn btn-primary btn-lg" %> <br />
+        </div>
+    </div>
+
+    <% end %>
+
+    <!-- LINK BACK TO ARTICLES INDEX PAGE -->
+    <div class="col-sm-4 offset-sm-4">
+        [ <%= link_to "Cancel request and return to user listing", articles_path %> ]
+    </div>
+
+</div>
