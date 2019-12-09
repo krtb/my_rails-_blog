@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # get path directed to welcome controller, home action
   root 'pages#home'
   get 'about', to: 'pages#about'
-  get 'signup', to: 'users#new'
+
   resources :articles
+
+  get 'signup', to: 'users#new'
+  resources 'users', except: [:new]
 end
