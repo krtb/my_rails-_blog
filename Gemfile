@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
-
+gem 'pg'
 # add SASS / BOOTSTRAP STYLING = https://github.com/twbs/bootstrap-sass through YARN / WEBPACK
 # add FOREMAN for quicker 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
