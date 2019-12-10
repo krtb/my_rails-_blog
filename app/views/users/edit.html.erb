@@ -1,1 +1,56 @@
 <h1 class="center" >Edit your account</h1>
+
+<!-- obj value becomes what it's container file is -->
+<%= render "shared/errors", obj: @user %>
+
+<div class="container">
+
+    <%= form_for(@user, :html => {class: "form-horizontal center", role: "form" }) do |f| %>
+
+    <!-- TITLE -->
+    <div class="control-label form-group row">
+        <div class="col-sm-2">
+            <%= f.label :username %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true  %>
+        </div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="control-label form-group row">
+        <div class="col-sm-2">
+            <%= f.label :email %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+        </div>
+    </div>
+
+    <!-- PASSWORD -->
+    <!-- user virtual attribute of password instead of password_digest -->
+    <div class="control-label form-group row">
+        <div class="col-sm-2">
+            <%= f.label :password %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.password_field :password, class: "form-control", placeholder: "Enter email" %>
+        </div>
+    </div>
+
+
+    <!-- SUBMIT BUTTON -->
+    <div class="control-label form-group row">
+        <div class="col-auto offset-sm-2">
+            <%= f.submit "Update your account", class: "btn btn-primary btn-lg" %> <br />
+        </div>
+    </div>
+
+    <% end %>
+
+    <!-- LINK BACK TO ARTICLES INDEX PAGE -->
+    <div class="col-sm-4 offset-sm-4">
+        [ <%= link_to "Cancel request and return to user listing", articles_path %> ]
+    </div>
+
+</div>
