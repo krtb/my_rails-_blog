@@ -1,5 +1,22 @@
 <h1 class="center" > All Users</h1>
-
+<div class="mx-auto" style="width: 200px;">
 <% @users.each do |user|  %>
-
+<ul class="listing list-group center">
+    <div class="row listing-row">
+        <div class="col-sm-12 list-group-item">
+            <li>
+                <%= link_to gravatar_for(user), user_path(user) %>
+            </li>
+            <li class="article-title">
+                <%= link_to  user.username, user_path(user) %>
+            </li>
+            <li>
+                <small>
+                    <%= pluralize(user.articles.count, "article") if user.articles  %>
+                </small>
+            </li>
+        </div>
+    </div>
+</ul>
 <% end %>
+</div>
