@@ -9,3 +9,5 @@
 </div>
 
 <h4 class="center" > <%= @user.username %>'s articles </h4>
+
+<%= render 'articles/article', obj: @user.articles  %>
