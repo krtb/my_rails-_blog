@@ -2,9 +2,11 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
-gem 'pg'
+# gem 'pg'
 # add SASS / BOOTSTRAP STYLING = https://github.com/twbs/bootstrap-sass through YARN / WEBPACK
 # add FOREMAN for quicker 
+# GRAVATAR for rendering user email img when they sign up
+gem 'gravtastic'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use Active Model has_secure_password
@@ -52,7 +54,7 @@ group :test do
   gem 'webdrivers'
 end
 
-group :production do
+group :production, :development, :test do
   gem 'pg'
 end
 
