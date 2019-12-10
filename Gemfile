@@ -5,6 +5,9 @@ ruby '2.6.4'
 # gem 'pg'
 # add SASS / BOOTSTRAP STYLING = https://github.com/twbs/bootstrap-sass through YARN / WEBPACK
 # add FOREMAN for quicker 
+# ADD PAGINATION
+gem 'will_paginate', '~> 3.2.1'
+gem 'bootstrap-will_paginate', '~>1.0.0'
 # GRAVATAR for rendering user email img when they sign up
 gem 'gravtastic'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
