@@ -1,4 +1,9 @@
-<h1 class="center" >Listing all articles</h1>
-
+<h1 class="col-sm-4 offset-sm-4 " >Listing all articles</h1>
+<div class="col-sm-4 offset-sm-4 ">
+    <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
 <!-- for this article partial, use @articles as value for obj -->
 <%= render 'article', obj: @articles %>
+<div class="col-sm-4 offset-sm-4 ">
+    <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
