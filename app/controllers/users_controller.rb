@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+
+    def index
+        # display a list of all users
+        @users = Users.all
+    end
+
     def new
         @user = User.new
     end
