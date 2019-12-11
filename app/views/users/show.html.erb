@@ -9,5 +9,11 @@
 </div>
 
 <h4 class="center" > <%= @user.username %>'s articles </h4>
-
-<%= render 'articles/article', obj: @user.articles  %>
+<div class="col-sm-4 offset-sm-4" >
+<%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer )%>
+</div>
+<!-- use pageinate instance variable in show action, user_articles -->
+<%= render 'articles/article', obj: @user_articles  %>
+<div class="col-sm-4 offset-sm-4">
+    <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer ) %>
+</div> 
