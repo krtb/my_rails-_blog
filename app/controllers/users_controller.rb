@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
     def index
-        # display a list of all users
-        @users = User.all
+        # display a list of all users, use paginate 
+        @users = User.paginate(:page => params[:page], :per_page => 2)
     end
 
     def new

@@ -1,9 +1,14 @@
-<h1 class="center" > All Users</h1>
-<div class="mx-auto" style="width: 200px;">
+<div class="col-sm-12">
+<h1 class="col-sm-4 offset-sm-5" > All Users</h1>
+
+<div class="col-sm-4 offset-sm-4" >
+<%= will_paginate :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+</div>
+    
 <% @users.each do |user|  %>
-<ul class="listing list-group center">
-    <div class="row listing-row">
-        <div class="col-sm-12 list-group-item">
+<ul class="listing list-group col-sm-8 offset-sm-4">
+    <div class="row listing-row col-sm-12">
+        <div class="list-group-item col-sm-6">
             <li>
                 <%= link_to gravatar_for(user), user_path(user) %>
             </li>
