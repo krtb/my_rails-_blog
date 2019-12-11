@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
      else
         # flash.now = because not considered new http req, would flash 2 times. This way only once. 
         flash.now[:danger] = "There was something wrong with your information"
-        return 'new'
+        render 'new'
      end
     end
 
