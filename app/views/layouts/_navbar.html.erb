@@ -22,10 +22,21 @@
         </ul>
 
         <% if logged_in? %>
-            <a class="nav-link" href="#"><%= link_to 'Log Out', logout_path, method: :delete %> </a>
+            <a href="#"><%= link_to 'Log Out', logout_path, method: :delete, class: "nav-link" %> </a>
+        <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item " href="#"><%= link_to 'Edit Profile', edit_user_path(current_user), class: "dropdown-item dropdown-nav-link"  %></a>
+                <a class="dropdown-item" href="#"><%= link_to 'View Profile', user_path(current_user), class: "dropdown-item  dropdown-nav-link" %></a>
+            </div>
+        </div>
         <% else%>
-            <a href="#"><%= link_to 'Log In', login_path,  class: "nav-link"  %> </a>
-            <a href="#"><%= link_to 'Sign Up', signup_path,  class: "nav-link"  %> </a>
+        <a href="#"><%= link_to 'Log In', login_path,  class: "nav-link"  %> </a>
+        <a href="#"><%= link_to 'Sign Up', signup_path,  class: "nav-link"  %> </a>
         <% end %>
-    </div>
+
+</div>
 </nav>
