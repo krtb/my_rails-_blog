@@ -1,5 +1,7 @@
  class ArticlesController < ApplicationController
+    # before actions work in order
     before_action :set_article, only: [:edit, :update, :show, :destroy]
+    before_action :require_user, except: [:index, :show]
 
     def index
         @articles = Article.paginate(:page => params[:page], :per_page => 2)
