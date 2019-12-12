@@ -13,47 +13,41 @@
     end
 
     def edit
-        
     end
 
     def create
         # debugger 
         # can view article params in console with article_params below, typing (n) moves you console to next line
         # @article.user.username to get properties from params object hash
-
-
         # render plain: params[:article].inspect # <ActionController::Parameters {"title"=>"hello", "description"=>"there!\r\n"} permitted: false>
-        @article = Article.new(article_params) #need to white list values of Article, with what's beeing passed in from params  hash
-        @article = current_user
-        # @article.user = User.first # ensure that Article has User, before implementing AUTH
-        
-        if @article.save
-            flash[:success] = "Article was successfully created" #show message to user
-            redirect_to article_path(@article) # article GET /articles/:id article#show
-        else
-            render :new #render new view, to give user change to try again
-        end
+      @article = Article.new(article_params)
+      # @article.user = User.first # ensure that Article has User, before implementing AUTH
+      @article.user = current_user
+      if @article.save
+        flash[:success] = "Article was successfully created"
+        redirect_to article_path(@article)
+      else
+        # :new also works, to route to neqw view
+        render 'new'
+      end
     end
 
     def update
-        @article = Article.new(article_params)
-        if @article.save
-            flash[:success] = "Article was successfully updated"
-            redirect_to article_path(@article) # redirect to Article show page, article GET /articles/:id article#show
-        else # if did not pass validations
-            render 'edit' #render EDIT template again, 2nd way to do this is with ('') instead of (:)
-        end
+      if @article.update(article_params)
+        flash[:success] = "Article was successfully updated"
+        redirect_to article_path(@article)
+      else
+        render 'edit'
+      end
     end
 
     def show
-        
     end
 
     def destroy
         # find article based on :id found in params hash 
-        
-        flash[:danger] = "Article was successfully deleted"
         @article.destroy
+        flash[:danger] = "Article was successfully deleted"
         redirect_to articles_path
     end
 
