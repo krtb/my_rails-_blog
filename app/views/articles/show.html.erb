@@ -31,7 +31,7 @@
         </p>
 
         <div class="article-actions" >
-            <% if logged_in? && current_user == @article.user %> 
+            <% if logged_in? && (current_user == @article.user || current_user.admin?) %> 
             <a href="#" class="card-link"><%= link_to "Edit an article", 
                         edit_article_path(@article), 
                         class: "btn btn-sm btn-primary" 
