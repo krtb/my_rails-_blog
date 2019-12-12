@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-
-    has_many :articles #User is One side, from One-To-Many Association 
+    #User is One side, from One-To-Many Association
+    has_many :articles, dependent: :destroy  
 
     before_save {self.email = email.downcase} # lowercase email value before hitting database 
 
